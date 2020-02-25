@@ -4,17 +4,18 @@
 
 const sortArray = (array = []) => {
   //your code goes under this line
-  
-  let sortedArray = []; // array to hold sorted numbers
+
   let oddArray = []; // array to hold odd numbers
   let evenArray = []; // array to hold even numbers
 
   // Looping through the entire array to determine each element in the array
-  for (let i = 0; i <= array.length - 1; i++) { // begin for loop
+  for (let i = 0; i <= array.length - 1; i++) {
+    // begin for loop
     let numbers = array[i]; // declaring a 'numbers' variable to hold array index value
 
     // separates the odd numbers from the even numbers
-    if (numbers % 2 === 0) { // begin if else
+    if (numbers % 2 === 0) {
+      // begin if else
       // if the array index value has a remainder of 0 when divided by 2 then the number will be even
       evenArray.push(numbers); // add the even index value to the even array
     } else {
@@ -25,17 +26,15 @@ const sortArray = (array = []) => {
 
   evenArray.sort(); // sorted even numbers
   oddArray.sort(); // sorted odd numbers
-  
+
   console.log(evenArray); // display even numbers array
   console.log(oddArray); // display odd numbers array
- 
-  // sorted even numbers coming first, then sorted odd numbers following using .concat() 
-  const sortArray = evenArray.concat(oddArray);
-  
-  sortedArray.push(sortArray); // add the even-odd numbers sequence to the sorted array
-  
+
+  // sorted even numbers coming first, then sorted odd numbers following using .concat()
+  const sortedArray = evenArray.concat(oddArray);
+
   // returns the value of your sortArray function
-  return sortedArray;
+  console.log(sortedArray);
 
   //your code goes above this line
 };
